@@ -21,7 +21,7 @@ Spring、Spring AI、LangChain、FastAPI、Vue、React 等框架学习不放入�
 - [`python/`](python/README.md)：学习 Python 语言、标准库与运行时行为。
 - [`rust/`](rust/README.md)：学习 Rust 的所有权、类型系统与内存模型。
 - [`frontend/`](frontend/README.md)：学习 JavaScript、TypeScript 与 Web API。
-- [`docs/`](docs/learning-roadmap.md)：维护学习路线、环境约定和语言特性地图。
+- [`docs/`](docs/README.md)：维护学习路线、环境约定、语言特性地图和学习资源导航。
 
 ## 添加学习案例
 

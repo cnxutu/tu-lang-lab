@@ -4,12 +4,25 @@
 
 | 语言 | 版本或专题 | 特性 | Demo |
 | --- | --- | --- | --- |
-| Java | 8 | Lambda、Functional Interface、Stream API、Optional、CompletableFuture、Date-Time API | TBD |
-| Java | 17 学习基线 | Record、Sealed Class、Text Block、Switch Expression、Pattern Matching | TBD |
-| Java | 21 | Virtual Thread、Record Pattern、Sequenced Collection、Pattern Matching 增强 | TBD |
-| Java | 21（预览） | Structured Concurrency | TBD |
-| Java | 25 | 待按实际学习目标补充 | TBD |
-| JVM | 运行机制 | Memory、ClassLoader、GC、JIT、Bytecode | TBD |
+| Java | 8 | Lambda 与方法引用 | `java/java8/lambda-method-reference-demo` |
+| Java | 8 | Functional Interface 与默认方法 | `java/java8/functional-interface-default-method-demo`（TBD） |
+| Java | 8 | Stream API 与 Collector | `java/java8/stream-collector-demo`（TBD） |
+| Java | 8 | Optional | `java/java8/optional-api-boundary-demo`（TBD） |
+| Java | 8 | CompletableFuture | `java/java8/completable-future-composition-demo`（TBD） |
+| Java | 8 | Date-Time API | `java/java8/java-time-api-demo`（TBD） |
+| Java | 17 学习基线 | Record | `java/java17/record-value-object-demo` |
+| Java | 17 学习基线 | Sealed Class、`instanceof` Pattern Matching | `java/java17/`（TBD） |
+| Java | 17 学习基线 | Text Block、Switch Expression、`HexFormat`、`RandomGenerator` | `java/java17/`（TBD） |
+| Java | 17（预览） | Pattern Matching for `switch` | `java/java17/pattern-switch-preview-demo`（TBD） |
+| Java | 21 | Virtual Thread 与 Pinning 诊断 | `java/java21/virtual-thread-demo` |
+| Java | 21 | Record Pattern、Pattern Matching for `switch`、Sequenced Collection | `java/java21/`（TBD） |
+| Java | 21（预览） | Structured Concurrency、Scoped Values、FFM API、Unnamed Patterns | `java/java21/`（TBD） |
+| Java | 25 | Scoped Values、Module Import Declarations、Compact Source Files、Flexible Constructor Bodies | `java/java25/`（TBD） |
+| Java | 25 | KDF API、Compact Object Headers、Generational Shenandoah、JFR/AOT 诊断 | `java/java25/`（TBD） |
+| Java | 25（预览） | Structured Concurrency、Primitive Patterns、PEM Encodings、Stable Values | `java/java25/`（TBD） |
+| Java | 25（孵化） | Vector API | `java/java25/vector-api-incubator-demo`（TBD） |
+| JVM | Bytecode | `javap`、条件分支与方法调用 | `java/jvm/bytecode-inspection-demo` |
+| JVM | 运行机制 | Memory、ClassLoader、JIT、GC、JFR、Thread Dump | `java/jvm/`（TBD） |
 
 ## 版本标注约定
 

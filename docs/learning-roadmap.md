@@ -10,6 +10,8 @@
 
 ## Phase 1：Java 核心语言演进
 
+当前实施项：Java 8 Lambda、Java 17 Record、Java 21 Virtual Thread 与 JVM Bytecode。每项都是独立 Maven Demo，其他条目仍为后续学习计划。
+
 1. Java 8：Lambda、函数式接口、Stream、Optional、CompletableFuture、Date-Time API。
 2. Java 17：Record、Sealed Class、文本块、switch expression 与模式匹配相关能力。
 3. Java 21：Virtual Thread、Record Pattern、Sequenced Collection、模式匹配增强；预览特性单独标注。
