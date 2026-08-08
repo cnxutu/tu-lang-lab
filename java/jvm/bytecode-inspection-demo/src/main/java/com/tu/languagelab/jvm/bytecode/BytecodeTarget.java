@@ -5,6 +5,7 @@ public final class BytecodeTarget {
     }
 
     public static String classify(int value) {
+        // 保留显式分支，便于用 javap 观察条件跳转指令与常量返回值。
         if (value < 0) {
             return "negative";
         }

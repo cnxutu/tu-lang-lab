@@ -8,6 +8,8 @@
 | [java-feature-map.md](java-feature-map.md) | 把 Java 版本、能力状态与建议 Demo 名称建立索引 | 新增或查找 Java 案例时 |
 | [environment-setup.md](environment-setup.md) | 说明多 JDK、Python、Rust 与 pnpm 的本机环境边界 | 首次配置 macOS 或 WSL2 环境时 |
 | [java-learning-resources.md](java-learning-resources.md) | 汇总官方规范、参考实现资料与补充博客 | 学习某项 Java/JVM 能力前或遇到版本差异时 |
+| [java-business-scenario-map.md](java-business-scenario-map.md) | 从业务问题反查 Java 特性、收益与误用边界 | 知道问题但不知道应学习何种语言能力时 |
+| [java-version-evolution-guide.md](java-version-evolution-guide.md) | 比较 Java 8、17、21、25 的能力演进并给出 Demo 学习顺序 | 需要决定下一步学习哪个 JDK 或特性时 |
 
 ## 文档维护规则
 

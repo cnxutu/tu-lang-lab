@@ -1,4 +1,4 @@
-# tu-language-lab
+# tu-lang-lab
 
 个人 Programming Language Lab，用于长期沉淀编程语言的版本演进、语言特性、语法能力、运行机制、标准库与语言设计思想。
 
@@ -22,6 +22,8 @@ Spring、Spring AI、LangChain、FastAPI、Vue、React 等框架学习不放入�
 - [`rust/`](rust/README.md)：学习 Rust 的所有权、类型系统与内存模型。
 - [`frontend/`](frontend/README.md)：学习 JavaScript、TypeScript 与 Web API。
 - [`docs/`](docs/README.md)：维护学习路线、环境约定、语言特性地图和学习资源导航。
+
+Java 首轮地图包含 43 个相互独立的 Maven Demo。建议从 [版本演进与推荐顺序](docs/java-version-evolution-guide.md) 开始，再按 [Java 特性地图](docs/java-feature-map.md) 进入具体案例；学习地址、GitHub/博客推荐和星级理由见 [Java 学习资源](docs/java-learning-resources.md)，业务问题导航见 [Java 业务场景地图](docs/java-business-scenario-map.md)。
 
 ## 添加学习案例
 

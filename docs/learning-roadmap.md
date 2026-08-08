@@ -1,6 +1,6 @@
 # 学习路线
 
-本路线用于安排学习顺序，不代表已经实现或验证了对应案例。
+本路线用于安排学习顺序；案例状态以 [Java 特性地图](java-feature-map.md) 为准。当前 Java 已创建 43 个独立 Maven Demo，其中 Java 8、17、21 与 JVM 案例已按目标 JDK 验证，Java 25 统一等待 JDK 25 本机验证。
 
 ## Phase 0：环境与约定
 
@@ -10,18 +10,17 @@
 
 ## Phase 1：Java 核心语言演进
 
-当前实施项：Java 8 Lambda、Java 17 Record、Java 21 Virtual Thread 与 JVM Bytecode。每项都是独立 Maven Demo，其他条目仍为后续学习计划。
+当前实施项：Java 8、17、21 的稳定/预览语言能力与 JVM 观察案例已形成完整首轮地图；Java 25 已完成源码、测试、POM 和文档骨架，状态固定为 `pending_jdk25_verification`。
 
-1. Java 8：Lambda、函数式接口、Stream、Optional、CompletableFuture、Date-Time API。
-2. Java 17：Record、Sealed Class、文本块、switch expression 与模式匹配相关能力。
-3. Java 21：Virtual Thread、Record Pattern、Sequenced Collection、模式匹配增强；预览特性单独标注。
-4. Java 25：按实际需要补充稳定特性与版本差异案例。
+1. Java 8：Lambda → 函数式接口 → Stream/Collector → Optional → CompletableFuture → Date-Time API。
+2. Java 17：Record → Sealed Class → `instanceof`/switch 模式 → Text Block → HexFormat/RandomGenerator；预览案例用于理解演进边界。
+3. Java 21：Virtual Thread → Record Pattern → Sequenced Collection → 稳定 Pattern switch → Structured Concurrency/Scoped Values/FFM 预览。
+4. Java 25：先阅读版本演进表，再按稳定 → 预览 → 孵化顺序运行；未安装 JDK 25 前只做静态阅读。
+5. 每个案例按 README 的 Learning Resources → Code Walkthrough → Business Mapping → Verification 顺序阅读。
 
 ## Phase 2：JVM 运行机制
 
-- JVM 内存模型与对象生命周期。
-- ClassLoader 与类加载过程。
-- GC、JIT、字节码与诊断工具。
+- JVM Memory → ClassLoader → Bytecode → JIT → GC → JFR → Thread Dump，先观察再形成性能结论。
 
 ## Phase 3：Python 语言能力
 

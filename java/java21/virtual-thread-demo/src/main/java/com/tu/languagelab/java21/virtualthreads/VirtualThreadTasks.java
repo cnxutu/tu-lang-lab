@@ -19,6 +19,7 @@ public final class VirtualThreadTasks {
 
         List<Future<TaskResult>> futures = new ArrayList<Future<TaskResult>>();
         try (ExecutorService executor = java.util.concurrent.Executors.newVirtualThreadPerTaskExecutor()) {
+            // 每个任务创建一个虚拟线程；它适合大量阻塞任务，而不是复用为线程池。
             for (int taskId = 1; taskId <= taskCount; taskId++) {
                 final int currentTaskId = taskId;
                 futures.add(executor.submit(() -> new TaskResult(
@@ -30,6 +31,7 @@ public final class VirtualThreadTasks {
             for (Future<TaskResult> future : futures) {
                 results.add(future.get());
             }
+            // 并发完成顺序不可预测，排序使 Demo 的输出和断言保持确定。
             results.sort(Comparator.comparingInt(TaskResult::taskId));
             return results;
         }
