@@ -1,0 +1,24 @@
+# Operating systems and editors
+.DS_Store
+Thumbs.db
+.idea/
+*.iml
+.vscode/
+
+# Java and Rust build output
+**/target/
+
+# Python environments and generated files
+**/.venv/
+**/__pycache__/
+**/.pytest_cache/
+**/*.py[cod]
+
+# Frontend dependencies and output
+**/node_modules/
+**/dist/
+
+# Local environment values
+.env
+.env.*
+!.env.example
