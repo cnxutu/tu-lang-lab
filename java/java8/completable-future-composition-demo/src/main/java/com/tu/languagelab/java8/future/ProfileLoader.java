@@ -1,6 +1,7 @@
 package com.tu.languagelab.java8.future;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.Executor;
+/** 用受控执行器模拟资料加载，突出 CompletableFuture 的执行器和组合背景。 */
 public final class ProfileLoader {
     private final Executor executor;
     public ProfileLoader(Executor executor) { this.executor = executor; }

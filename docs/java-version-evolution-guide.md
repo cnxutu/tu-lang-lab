@@ -1,6 +1,6 @@
 # Java 版本演进与学习顺序
 
-本指南只梳理 K5 当前关注的 Java 8、17、21、25。它用于理解“为什么学习下一版”，不是完整发布说明；精确 API 和预览状态以 [OpenJDK JEP Index](https://openjdk.org/jeps/0) 为准。
+本指南只梳理 K5 当前关注的 Java 8、17、21、25。它用于理解“为什么学习下一版”，不是完整发布说明；精确 API 和预览状态以 [OpenJDK JEP Index](https://openjdk.org/jeps/0) 为准。更完整的跨代背景见 [Java 跨代故事线](java-cross-generation-story.md)。
 
 ## 先理解版本基线
 
@@ -15,10 +15,11 @@
 
 ### 第一段：先建立 Java 8 的组合能力
 
-1. [Lambda 与方法引用](../java/java8/lambda-method-reference-demo/README.md)：理解“行为可以作为参数”。背景是筛选、排序和格式化规则经常变化。
-2. [函数式接口与默认方法](../java/java8/functional-interface-default-method-demo/README.md)：理解接口如何在兼容旧实现的前提下演进。背景是策略、校验和转换扩展点。
-3. [Stream 与 Collector](../java/java8/stream-collector-demo/README.md)：理解 map/filter/group/reduce 数据流。背景是订单、日志或统计报表的分组汇总。
-4. [Optional](../java/java8/optional-api-boundary-demo/README.md) → [CompletableFuture](../java/java8/completable-future-composition-demo/README.md) → [Date-Time API](../java/java8/java-time-api-demo/README.md)：依次处理缺失值、异步组合和时间语义。
+1. [面向对象](../java/java8/fundamentals/object-oriented-basics-demo/README.md) → [集合](../java/java8/fundamentals/collection-basics-demo/README.md) → [泛型](../java/java8/fundamentals/generics-basics-demo/README.md)：先建立对象、数据结构和编译期类型安全。
+2. [异常](../java/java8/fundamentals/exception-basics-demo/README.md) → [文件 IO](../java/java8/fundamentals/file-io-basics-demo/README.md) → [HTTP 网络](../java/java8/fundamentals/http-network-basics-demo/README.md)：理解程序如何面对外部不确定性。
+3. [线程同步](../java/java8/fundamentals/thread-synchronization-basics-demo/README.md)：先掌握共享状态和等待边界，再进入高层并发 API。
+4. [Lambda 与方法引用](../java/java8/lambda-method-reference-demo/README.md) → [函数式接口与默认方法](../java/java8/functional-interface-default-method-demo/README.md)：理解行为参数化和接口演进。
+5. [Stream 与 Collector](../java/java8/stream-collector-demo/README.md) → [Optional](../java/java8/optional-api-boundary-demo/README.md) → [CompletableFuture](../java/java8/completable-future-composition-demo/README.md) → [Date-Time API](../java/java8/java-time-api-demo/README.md)：依次处理数据流、缺失值、异步组合和时间语义。
 
 ### 第二段：用 Java 17 改善领域建模
 

@@ -10,6 +10,7 @@
 | [java-learning-resources.md](java-learning-resources.md) | 汇总官方规范、参考实现资料与补充博客 | 学习某项 Java/JVM 能力前或遇到版本差异时 |
 | [java-business-scenario-map.md](java-business-scenario-map.md) | 从业务问题反查 Java 特性、收益与误用边界 | 知道问题但不知道应学习何种语言能力时 |
 | [java-version-evolution-guide.md](java-version-evolution-guide.md) | 比较 Java 8、17、21、25 的能力演进并给出 Demo 学习顺序 | 需要决定下一步学习哪个 JDK 或特性时 |
+| [java-cross-generation-story.md](java-cross-generation-story.md) | 解释各代 Java 面对的旧问题、引入背景和对应案例 | 想理解“为什么出现这个新概念”时 |
 
 ## 文档维护规则
 

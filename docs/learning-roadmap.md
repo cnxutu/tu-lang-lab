@@ -1,6 +1,6 @@
 # 学习路线
 
-本路线用于安排学习顺序；案例状态以 [Java 特性地图](java-feature-map.md) 为准。当前 Java 已创建 43 个独立 Maven Demo，其中 Java 8、17、21 与 JVM 案例已按目标 JDK 验证，Java 25 统一等待 JDK 25 本机验证。
+本路线用于安排学习顺序；案例状态以 [Java 特性地图](java-feature-map.md) 为准。当前 Java 已创建 50 个独立 Maven Demo，其中 Java 8、17、21 与 JVM 案例已按目标 JDK 验证，Java 25 统一等待 JDK 25 本机验证。
 
 ## Phase 0：环境与约定
 
@@ -10,7 +10,7 @@
 
 ## Phase 1：Java 核心语言演进
 
-当前实施项：Java 8、17、21 的稳定/预览语言能力与 JVM 观察案例已形成完整首轮地图；Java 25 已完成源码、测试、POM 和文档骨架，状态固定为 `pending_jdk25_verification`。
+当前实施项：Java 8 已增加从面向对象到网络和线程同步的基础入门层；Java 8、17、21 的稳定/预览语言能力与 JVM 观察案例已形成完整首轮地图；Java 25 已完成源码、测试、POM 和文档骨架，状态固定为 `pending_jdk25_verification`。
 
 1. Java 8：Lambda → 函数式接口 → Stream/Collector → Optional → CompletableFuture → Date-Time API。
 2. Java 17：Record → Sealed Class → `instanceof`/switch 模式 → Text Block → HexFormat/RandomGenerator；预览案例用于理解演进边界。

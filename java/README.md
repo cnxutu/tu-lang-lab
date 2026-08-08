@@ -19,4 +19,4 @@ Java 是本仓库的主要学习方向。每个目录以案例的**目标运行 
 - **incubator**：显式加入所需模块和运行参数。
 - **experimental**：说明 JVM 选项、适用实现与结果不可泛化的边界。
 
-具体条目与建议案例名称维护在 [`docs/java-feature-map.md`](../docs/java-feature-map.md)。
+具体条目与建议案例名称维护在 [`docs/java-feature-map.md`](../docs/java-feature-map.md)；跨代问题背景见 [`docs/java-cross-generation-story.md`](../docs/java-cross-generation-story.md)，JDK8 基础入口从 [`java8/README.md`](java8/README.md) 开始。

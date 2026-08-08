@@ -1,6 +1,7 @@
 package com.tu.languagelab.java8.function;
 
 @FunctionalInterface
+/** 函数式接口把可替换的折扣规则变成单一抽象方法契约。 */
 public interface DiscountRule {
     int apply(int price);
 

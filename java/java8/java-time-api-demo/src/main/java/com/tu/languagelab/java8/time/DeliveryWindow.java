@@ -3,6 +3,7 @@ package com.tu.languagelab.java8.time;
 import java.time.Duration;
 import java.time.ZonedDateTime;
 
+/** 用不可变 java.time 类型表达带时区的配送时间窗口。 */
 public final class DeliveryWindow {
     private DeliveryWindow() {
     }

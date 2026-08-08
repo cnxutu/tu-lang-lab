@@ -1,6 +1,7 @@
 package com.tu.languagelab.java8.optional;
 import java.util.Map;
 import java.util.Optional;
+/** 用 Optional 建模“按 ID 可能找不到用户”的查询契约。 */
 public final class UserDirectory {
     private final Map<String, String> displayNames;
     public UserDirectory(Map<String, String> displayNames) { this.displayNames = displayNames; }

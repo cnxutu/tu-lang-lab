@@ -10,6 +10,13 @@
 | Java | 8 | Optional | stable | `java/java8/optional-api-boundary-demo` | [README](../java/java8/optional-api-boundary-demo/README.md) | [缺失值处理](java-business-scenario-map.md) |
 | Java | 8 | CompletableFuture | stable | `java/java8/completable-future-composition-demo` | [README](../java/java8/completable-future-composition-demo/README.md) | [并发结果聚合](java-business-scenario-map.md) |
 | Java | 8 | Date-Time API | stable | `java/java8/java-time-api-demo` | [README](../java/java8/java-time-api-demo/README.md) | 时间窗口与时区 |
+| Java | 8 | 面向对象基础 | stable | `java/java8/fundamentals/object-oriented-basics-demo` | [README](../java/java8/fundamentals/object-oriented-basics-demo/README.md) | 状态不变量与对象建模 |
+| Java | 8 | 集合基础 | stable | `java/java8/fundamentals/collection-basics-demo` | [README](../java/java8/fundamentals/collection-basics-demo/README.md) | 列表、去重与索引 |
+| Java | 8 | 泛型基础 | stable | `java/java8/fundamentals/generics-basics-demo` | [README](../java/java8/fundamentals/generics-basics-demo/README.md) | 类型安全容器与算法 |
+| Java | 8 | 异常基础 | stable | `java/java8/fundamentals/exception-basics-demo` | [README](../java/java8/fundamentals/exception-basics-demo/README.md) | 输入校验与错误契约 |
+| Java | 8 | 文件 IO 基础 | stable | `java/java8/fundamentals/file-io-basics-demo` | [README](../java/java8/fundamentals/file-io-basics-demo/README.md) | 配置、导入与导出 |
+| Java | 8 | HTTP 网络基础 | stable | `java/java8/fundamentals/http-network-basics-demo` | [README](../java/java8/fundamentals/http-network-basics-demo/README.md) | 外部接口与超时 |
+| Java | 8 | 线程同步基础 | stable | `java/java8/fundamentals/thread-synchronization-basics-demo` | [README](../java/java8/fundamentals/thread-synchronization-basics-demo/README.md) | 共享状态与并发更新 |
 | Java | 17 学习基线 | Record | stable | `java/java17/record-value-object-demo` | [README](../java/java17/record-value-object-demo/README.md) | DTO、快照和值对象 |
 | Java | 17 学习基线 | Sealed Class | stable | `java/java17/sealed-hierarchy-demo` | [README](../java/java17/sealed-hierarchy-demo/README.md) | 有限状态与事件 |
 | Java | 17 学习基线 | `instanceof` Pattern Matching | stable | `java/java17/instanceof-pattern-demo` | [README](../java/java17/instanceof-pattern-demo/README.md) | 类型分支与解析 |

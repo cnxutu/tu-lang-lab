@@ -62,6 +62,16 @@
 4. **Java 25**：先从 JDK 25 Release Page 建立清单 → 每项能力进入对应 JEP → 对预览/孵化能力单独建立实验案例。
 5. **JVM**：先定义可复现实验，再参考 JFR 文档与 Shipilëv 的性能方法论；不要从博客数据直接推导性能结论。
 
+## JDK 8 基础入门资源
+
+| 资源 | 推荐 | 理由 |
+| --- | --- | --- |
+| [Oracle Java Tutorials](https://docs.oracle.com/javase/tutorial/) | ★★★★★ | 面向初学者覆盖类、集合、异常、IO、网络和并发，适合与 `java8/fundamentals` 逐章对照。 |
+| [Java SE 8 API](https://docs.oracle.com/javase/8/docs/api/) | ★★★★★ | 查集合、泛型、Files、URLConnection、Thread 的精确方法契约。 |
+| [JavaGuide](https://github.com/Snailclimb/JavaGuide) | ★★★★☆ | 国内中文索引覆盖 Java 基础、集合、并发和 JVM，适合复习和定位主题；规范结论需回查 API/JLS。 |
+| [The Java™ Tutorials Archive](https://github.com/javaee/tutorial-examples) | ★★★☆☆ | 可用于观察官方示例工程组织方式，但仓库已归档，适合历史/JDK8 对照，不作为现代 API 首选。 |
+| [Baeldung Java Basics](https://www.baeldung.com/java-tutorial) | ★★★☆☆ | 小节短、适合补充直觉；版本和性能结论必须结合 K5 测试重新验证。 |
+
 ## GitHub / 博客使用原则
 
 1. GitHub 项目用来观察真实代码、测试与演进记录；不要复制整段实现替代自己动手。

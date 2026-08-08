@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.function.Function;
 import java.util.function.Predicate;
 
+/** 提供可替换的排序和格式化操作，承载 Lambda 与方法引用的核心机制。 */
 public final class TaskOperations {
     private TaskOperations() {
     }

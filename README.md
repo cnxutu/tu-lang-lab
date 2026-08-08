@@ -23,7 +23,7 @@ Spring、Spring AI、LangChain、FastAPI、Vue、React 等框架学习不放入�
 - [`frontend/`](frontend/README.md)：学习 JavaScript、TypeScript 与 Web API。
 - [`docs/`](docs/README.md)：维护学习路线、环境约定、语言特性地图和学习资源导航。
 
-Java 首轮地图包含 43 个相互独立的 Maven Demo。建议从 [版本演进与推荐顺序](docs/java-version-evolution-guide.md) 开始，再按 [Java 特性地图](docs/java-feature-map.md) 进入具体案例；学习地址、GitHub/博客推荐和星级理由见 [Java 学习资源](docs/java-learning-resources.md)，业务问题导航见 [Java 业务场景地图](docs/java-business-scenario-map.md)。
+Java 首轮地图包含 50 个相互独立的 Maven Demo，其中新增的 JDK8 基础入门层覆盖面向对象、集合、泛型、异常、文件 IO、HTTP 网络和线程同步。建议从 [Java 跨代故事线](docs/java-cross-generation-story.md) 和 [版本演进与推荐顺序](docs/java-version-evolution-guide.md) 开始，再按 [Java 特性地图](docs/java-feature-map.md) 进入具体案例；学习地址、GitHub/博客推荐和星级理由见 [Java 学习资源](docs/java-learning-resources.md)，业务问题导航见 [Java 业务场景地图](docs/java-business-scenario-map.md)。
 
 ## 添加学习案例
 
