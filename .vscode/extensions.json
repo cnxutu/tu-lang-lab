@@ -1,0 +1,11 @@
+{
+  "recommendations": [
+    "vscjava.vscode-java-pack",
+    "ms-python.python",
+    "rust-lang.rust-analyzer",
+    "golang.go",
+    "ms-vscode.cpptools",
+    "dbaeumer.vscode-eslint",
+    "ms-vscode-remote.remote-wsl"
+  ]
+}

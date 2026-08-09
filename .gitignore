@@ -3,7 +3,8 @@
 Thumbs.db
 .idea/
 *.iml
-.vscode/
+.vscode/*
+!.vscode/extensions.json
 
 # Java and Rust build output
 **/target/

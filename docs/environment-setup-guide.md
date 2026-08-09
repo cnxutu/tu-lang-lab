@@ -1,6 +1,6 @@
 # K5 开发环境上手指南
 
-本指南面向 Windows 原生、Windows WSL2 Ubuntu 和 macOS，目标是让第一次进入 K5 的人完成工具链安装、环境验证、Demo 运行和断点调试。
+本指南面向 Windows 宿主 + WSL2 Ubuntu 和 macOS，目标是让第一次进入 K5 的人完成工具链安装、环境验证、Demo 运行和断点调试。
 
 K5 实际目录：`D:\workspace\github\tu-lang-lab`。WSL 中对应 `/mnt/d/workspace/github/tu-lang-lab`。在 WSL/macOS 上长期编译时，建议将仓库放在 Linux/macOS 本地磁盘，例如 `~/workspace/tu-lang-lab`，避免在 `/mnt/d` 或外接 NTFS 目录上频繁读写构建产物。
 
@@ -8,26 +8,19 @@ K5 实际目录：`D:\workspace\github\tu-lang-lab`。WSL 中对应 `/mnt/d/work
 
 | 环境 | 推荐用途 | 推荐工具 | 说明 |
 | --- | --- | --- | --- |
-| Windows 原生 | IntelliJ IDEA、Windows 调试、Java | Temurin JDK、Maven、Python、Node/pnpm、Go、MSYS2 GCC 或 MSVC | C 的 Makefile 更适合 MSYS2 或 WSL |
+| Windows 宿主 | 安装 VS Code、启动 WSL2、打开 Remote - WSL | Windows Terminal、VS Code、WSL2 Ubuntu | 不在 Windows 原生维护 K5 编译器或依赖 |
 | Windows WSL2 Ubuntu | Linux/CI 一致的命令行学习 | OpenJDK/Temurin、Maven、Python、rustup、Node/pnpm、Go、GCC/Clang、GDB | VS Code 安装在 Windows，用 Remote - WSL 连接 |
 | macOS | Unix 工具链、Clang、Homebrew | Temurin/SDKMAN、Python、Node/pnpm、rustup、Go、Apple Clang | C 使用 Xcode Command Line Tools |
 
-推荐主线：Windows 用户用 WSL2 跑 Go、Rust、C 和脚本；Java 可在 IntelliJ IDEA 原生或 WSL 中运行；Frontend 使用 Node/pnpm；Python 两边均可。
+推荐主线：整个 K5 统一使用 WSL2 Ubuntu 工具链和 VS Code。Windows 只承担 VS Code 宿主与 WSL 入口，Java、Python、Rust、Go、C、Frontend 全部在 WSL 中运行。VS Code 负责编辑、终端和调试，JDK、Python、rustc、Go、GCC/Clang 与 Node.js 仍是各语言真正的编译器或运行时。
+
+K5 根目录不是 Maven 聚合工程，也没有跨语言统一构建命令。打开根目录用于导航即可；运行时必须进入具体 Demo 目录，按照该 Demo 的 README 执行命令。
 
 ## 2. 通用准备
 
 1. 安装 [Git](https://git-scm.com/downloads)，确认 `git --version`。
 2. 打开 K5，不要把 Vue、React、Spring 等框架工程放进本仓库。
-3. 运行环境检查脚本：
-
-PowerShell：
-
-```powershell
-cd D:\workspace\github\tu-lang-lab
-powershell -ExecutionPolicy Bypass -File .\scripts\check-environment.ps1
-```
-
-WSL/macOS：
+3. 在 WSL/macOS 中运行环境检查脚本：
 
 ```bash
 cd ~/workspace/tu-lang-lab
@@ -36,17 +29,9 @@ bash scripts/check-environment.sh
 
 `-Strict`/`--strict` 会在任一工具缺失时返回非零；第一次检查建议先不使用 strict。
 
-## 2.1 一键安装脚本
+## 2.1 工具链初始化脚本
 
 脚本默认只打印计划，不修改系统。确认清单后再加 `-Install` 或 `--install`。Tomcat 默认不安装，只有明确加 `-IncludeTomcat`/`--include-tomcat` 才会下载；Tomcat 不是 K5 语言案例依赖，只作为可选 Java Web 容器。
-
-Windows 原生（管理员/普通 PowerShell 均可，WinGet 按安装器要求请求权限）：
-
-```powershell
-cd D:\workspace\github\tu-lang-lab
-.\scripts\bootstrap-windows.ps1
-.\scripts\bootstrap-windows.ps1 -Install -IncludeTomcat
-```
 
 WSL2 Ubuntu：
 
@@ -64,103 +49,29 @@ bash scripts/bootstrap-macos.sh
 bash scripts/bootstrap-macos.sh --install --include-tomcat
 ```
 
-安装完成后关闭旧终端并重新打开，再运行 `check-environment`。Windows 使用 WinGet 的精确包 ID；如果某个 ID 随仓库变化，先执行 `winget search <name>`，不要盲目改成不明来源的下载地址。WinGet 的安装规则见 [Microsoft WinGet install](https://learn.microsoft.com/en-us/windows/package-manager/winget/install)。
+安装完成后关闭旧终端并重新打开，再在 WSL 中运行 `check-environment`。Windows 不参与 K5 编译器和依赖管理，只需要安装 [VS Code](https://code.visualstudio.com/) 与 [WSL2](https://learn.microsoft.com/en-us/windows/wsl/install)。
 
 Tomcat 脚本默认使用 Apache 官方 Tomcat 11.0.24 下载地址；Apache 下载页提供 Windows zip、Linux tar.gz、签名和 SHA-512 校验，生产环境使用前应核对 [Tomcat 11 downloads](https://tomcat.apache.org/download-11)。macOS 优先使用 Homebrew 的 `tomcat` formula，版本和路径以 [Homebrew tomcat formula](https://formulae.brew.sh/formula/tomcat) 为准。
 
-## 3. Windows 原生
+## 3. Windows 宿主
 
-### 3.1 基础工具
+### 3.1 VS Code 与 WSL 入口
 
 - 终端： [Windows Terminal](https://learn.microsoft.com/en-us/windows/terminal/)。
-- Java： [IntelliJ IDEA](https://www.jetbrains.com/idea/)。
-- 多语言： [VS Code](https://code.visualstudio.com/)。
+- 统一编辑器与调试入口： [VS Code](https://code.visualstudio.com/docs)。
+- Linux 工具链环境： [WSL2 Ubuntu 安装说明](https://learn.microsoft.com/en-us/windows/wsl/install)。
 
-### 3.2 Java/JDK 8、17、21、25
-
-K5 默认 JDK 17，同时保留 Java 8、21、25 案例。推荐 [Eclipse Temurin 安装页](https://adoptium.net/installation/) 安装多个 JDK，不要只安装 JRE。
+Windows 宿主中打开 WSL 项目：
 
 ```powershell
-java -version
-javac -version
-mvn -version
+wsl
+cd /mnt/d/workspace/github/tu-lang-lab
+code .
 ```
 
-当前 PowerShell 会话切换 JDK：
+推荐扩展：[Extension Pack for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack)、[Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)、[rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer)、[Go](https://marketplace.visualstudio.com/items?itemName=golang.go)、[C/C++](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools)、[ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)、[WSL](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl)。
 
-```powershell
-cd D:\workspace\github\tu-lang-lab
-.\scripts\set-java-home.ps1 -Version 17
-```
-
-脚本只修改当前 PowerShell 进程，不覆盖系统环境变量。Maven 安装参考 [Apache Maven Install](https://maven.apache.org/install.html)。进入任意 Java Demo 后执行：
-
-```powershell
-mvn clean test
-```
-
-Java 25 案例仍需单独安装 JDK 25，并按 README 的 `pending_jdk25_verification` 状态验证。
-
-### 3.3 Python
-
-从 [Python Downloads](https://www.python.org/downloads/) 安装 Python 3.13+，安装器中勾选 Add Python to PATH：
-
-```powershell
-cd D:\workspace\github\tu-lang-lab\python\python3-feature\syntax-basics-demo
-py -3.13 -m venv .venv
-.\.venv\Scripts\Activate.ps1
-python -m unittest discover -s tests
-```
-
-K5 当前案例主要使用标准库，不需要先安装框架依赖；虚拟环境不要提交。
-
-### 3.4 Node.js、pnpm、TypeScript
-
-从 [Node.js Downloads](https://nodejs.org/en/download/) 安装 LTS。按 [pnpm Installation](https://pnpm.io/installation) 使用 Corepack：
-
-```powershell
-npm install --global corepack@latest
-corepack enable pnpm
-pnpm --version
-```
-
-进入 Frontend Demo 后：
-
-```powershell
-pnpm install
-pnpm test
-pnpm typecheck
-```
-
-### 3.5 Go
-
-从 [Go Install](https://go.dev/doc/install) 安装 Go，确认：
-
-```powershell
-go version
-go env GOPATH GOMODCACHE
-```
-
-进入 Go Demo 后执行 `go test ./...`；并发案例追加 `go test -race ./...`。
-
-### 3.6 C
-
-Windows 原生有两条路线：推荐 [MSYS2](https://www.msys2.org/) UCRT64 GCC，或使用 [MSVC Build Tools](https://learn.microsoft.com/en-us/cpp/overview/acquire-msvc) 进行 Visual Studio 调试。MSYS2 UCRT64 中执行：
-
-```bash
-pacman -Syu
-pacman -S --needed base-devel mingw-w64-ucrt-x86_64-toolchain
-gcc --version
-make --version
-```
-
-进入 C Demo 后：
-
-```bash
-make test
-make
-./demo
-```
+VS Code 是统一入口，所有 K5 编译器和依赖都在 WSL 中安装。完成 WSL 初始化后，按 [WSL2 Ubuntu](#4-windows-wsl2-ubuntu) 章节安装 JDK、Python、Rust、Go、C 和 Node/pnpm。
 
 ## 4. Windows WSL2 Ubuntu
 
@@ -226,6 +137,8 @@ code .
 
 VS Code 左下角应显示 WSL: Ubuntu。不要在 Windows 普通窗口中误用 Linux 解释器，也不要混用 Windows 与 WSL 生成的 `node_modules`、`target` 或可执行文件。
 
+长期编译较多时，建议将仓库复制到 WSL 的 Linux 文件系统，例如 `~/workspace/tu-lang-lab`，再执行 `code .`；这样可以减少 `/mnt/d` 与 NTFS 之间的文件系统开销。
+
 ## 5. macOS
 
 ### 5.1 基础工具与 C
@@ -259,18 +172,29 @@ rustup default stable
 
 SDKMAN 的 Java 版本管理说明见 [SDKMAN Usage](https://sdkman.io/usage/)。
 
+### 5.3 使用 VS Code 打开 K5
+
+```bash
+cd ~/workspace/tu-lang-lab
+code .
+```
+
+macOS 使用 VS Code 集成终端运行各 Demo；Java、Python、Rust、Go、C 和 Frontend 的编译器/运行时仍由本机工具链提供。
+
 ## 6. IDE 与调试入口
 
-### IntelliJ IDEA（Java）
+### VS Code（K5 默认方案）
 
-1. 使用 `File → Open` 直接打开具体 Demo 目录，不导入根目录 Maven 聚合工程。
-2. `Project SDK` 选择该 Demo README 要求的 JDK。
-3. Maven 面板执行 `clean/test`；主类旁点击 Run/Debug。
-4. 预览案例确认运行配置包含 README 指定的 `--enable-preview`。
+1. 使用 `File → Open Folder` 打开 K5 根目录，或直接在终端执行 `code .`。
+2. 进入具体 Demo 目录后，先阅读 README，再在 VS Code 集成终端运行测试命令。
+3. Java 使用 Extension Pack for Java 提供代码导航、Maven、运行和断点调试；JDK 版本仍需通过 `set-java-home.sh` 和 `mvn -version` 确认。
+4. WSL 项目必须使用 Remote - WSL 打开，左下角显示 `WSL: Ubuntu` 后再运行 Linux 工具链。
 
-### VS Code（多语言/WSL）
+### IntelliJ IDEA（可选的 Java 备用工具）
 
-推荐扩展：[Java Extension Pack](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack)、[Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)、[Go](https://marketplace.visualstudio.com/items?itemName=golang.go)、[rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer)、[C/C++](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools)。
+K5 根目录可以被 IDEA 作为普通项目打开，但当前仓库没有父 POM 或跨语言聚合模块；IDEA 不会自动把 Python、Rust、Go、C 和 Frontend 变成一个统一工程。若进行 Java 深度调试，可使用 `File → Open` 打开具体 Demo 目录，例如 `java/java21/virtual-thread-demo`，并选择 README 要求的 Project SDK。更多 Maven 操作见 [IntelliJ Maven support](https://www.jetbrains.com/help/idea/maven-support.html)。
+
+如果希望只维护一个软件，优先使用 VS Code；IDEA 不属于 K5 的必需工具。
 
 调试入口：
 
