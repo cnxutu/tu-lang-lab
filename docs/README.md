@@ -11,6 +11,13 @@
 | [java-business-scenario-map.md](java-business-scenario-map.md) | 从业务问题反查 Java 特性、收益与误用边界 | 知道问题但不知道应学习何种语言能力时 |
 | [java-version-evolution-guide.md](java-version-evolution-guide.md) | 比较 Java 8、17、21、25 的能力演进并给出 Demo 学习顺序 | 需要决定下一步学习哪个 JDK 或特性时 |
 | [java-cross-generation-story.md](java-cross-generation-story.md) | 解释各代 Java 面对的旧问题、引入背景和对应案例 | 想理解“为什么出现这个新概念”时 |
+| [python-feature-map.md](python-feature-map.md) | Python 语法、标准库、类型与异步案例索引 | 选择 Python 学习主题时 |
+| [rust-feature-map.md](rust-feature-map.md) | Rust 类型、所有权、借用、生命周期与 Trait 案例索引 | 按编译器安全模型学习 Rust 时 |
+| [frontend-feature-map.md](frontend-feature-map.md) | JavaScript、TypeScript 与 Web API 案例索引 | 学习前端语言本身时 |
+| [cross-language-learning-roadmap.md](cross-language-learning-roadmap.md) | 解释 Python、JS/TS、Rust 与 Java 的递进关系 | 需要跨语言安排学习顺序时 |
+| [language-learning-resources.md](language-learning-resources.md) | 汇总官方、GitHub、国内外社区资源并给出星级理由 | 选择外部学习资料时 |
+| [language-version-evolution-guide.md](language-version-evolution-guide.md) | 梳理 Python、JavaScript、TypeScript 与 Rust 的版本演进背景 | 需要理解“为什么先学这个 Demo”时 |
+| [learning-case-catalog.md](learning-case-catalog.md) | 给出每个案例的前置、后续、验证命令和完整性检查清单 | 按顺序学习或检查案例是否缺项时 |
 
 ## 文档维护规则
 

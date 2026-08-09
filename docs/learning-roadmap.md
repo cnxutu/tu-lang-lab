@@ -1,6 +1,6 @@
 # 学习路线
 
-本路线用于安排学习顺序；案例状态以 [Java 特性地图](java-feature-map.md) 为准。当前 Java 已创建 50 个独立 Maven Demo，其中 Java 8、17、21 与 JVM 案例已按目标 JDK 验证，Java 25 统一等待 JDK 25 本机验证。
+本路线用于安排学习顺序；Java、Python、Rust 与 Frontend 分别由各自地图维护。当前 Java 已创建 50 个独立 Maven Demo；Python 9 个案例、Rust 6 个案例、Frontend 7 个案例已加入首批学习路径。
 
 ## Phase 0：环境与约定
 
@@ -24,19 +24,18 @@
 
 ## Phase 3：Python 语言能力
 
-- 语法、装饰器、生成器、迭代器、上下文管理器与类型标注。
-- Async/Await、模式匹配、dataclass、标准库与性能观察。
+- 按 [Python 学习地图](python-feature-map.md) 依次完成语法、装饰器、生成器、类型、dataclass、资源管理、异步和模式匹配。
+- 本机 Python 3.13 已通过 9 个案例的 `unittest`；后续再补 GIL、内存模型和性能观察。
 - GIL 与内存模型只在可复现实验基础上记录结论。
 
 ## Phase 4：Rust 语言设计
 
-- 所有权、借用、生命周期与类型系统。
-- Trait、泛型、async 与内存安全模型。
+- 按 [Rust 学习地图](rust-feature-map.md) 完成枚举、所有权、借用、生命周期、Trait/泛型和 async。
+- 当前缺少 `rustc`/`cargo`，状态为 `toolchain_pending_verification`，安装工具链后再执行 Cargo 验证。
 
 ## Phase 5：前端语言与浏览器运行时
 
-- JavaScript 的 ES6+、Promise、异步、闭包、原型与模块。
-- TypeScript 的类型系统、泛型、装饰器、Utility Type 与高级类型。
-- Web API、DOM 与事件循环。
+- 按 [Frontend 学习地图](frontend-feature-map.md) 完成 JavaScript 模块、闭包、Promise，再学习 Web API 事件循环和 Fetch 取消，最后进入 TypeScript 泛型与 Utility Types。
+- Node 22 案例已通过内置测试，TypeScript 案例已通过 `tsc --noEmit`。
 
 框架生态不属于本路线，应在独立的 `framework-lab` 中维护。

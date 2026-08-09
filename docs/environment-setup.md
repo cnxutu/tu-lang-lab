@@ -26,6 +26,8 @@ mvn -version
 
 - 使用 `rustup` 管理工具链，案例作为独立 Cargo crate。
 - 每个案例通过 `cargo run` 或 `cargo test` 独立验证。
+- 当前 Windows 主机尚未发现 `rustc`/`cargo`；Rust 案例已完成源码、Cargo manifest 和 README 静态审计，统一标记 `toolchain_pending_verification`。
+- 安装后执行 `rustup default stable`，再按 [学习案例目录](learning-case-catalog.md) 的顺序逐个运行 `cargo test`。
 
 ## Frontend
 

@@ -1,0 +1,6 @@
+{
+  "name": "utility-type-demo",
+  "private": true,
+  "scripts": { "typecheck": "tsc --noEmit" },
+  "devDependencies": { "typescript": "^5.6.0" }
+}

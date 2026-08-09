@@ -1,0 +1,6 @@
+{
+  "name": "fetch-abort-demo",
+  "private": true,
+  "type": "module",
+  "scripts": { "test": "node --test" }
+}

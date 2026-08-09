@@ -1,0 +1,6 @@
+{
+  "name": "type-system-generics-demo",
+  "private": true,
+  "scripts": { "typecheck": "tsc --noEmit" },
+  "devDependencies": { "typescript": "^5.6.0" }
+}

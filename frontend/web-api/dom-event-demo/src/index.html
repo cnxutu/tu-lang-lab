@@ -1,0 +1,11 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>K5 DOM Event Demo</title>
+<button id="lesson">Start lesson</button>
+<script type="module">
+  const button = document.querySelector('#lesson');
+  button.addEventListener('click', () => {
+    button.dataset.clicked = 'true';
+    button.textContent = 'Started';
+  });
+</script>

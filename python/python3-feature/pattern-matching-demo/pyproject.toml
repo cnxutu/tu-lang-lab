@@ -1,0 +1,9 @@
+[build-system]
+requires = []
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "k5-python-pattern-matching-demo"
+version = "0.1.0"
+requires-python = ">=3.10"
+description = "K5 Python structural pattern matching basics"
