@@ -2,6 +2,10 @@
 
 本仓库需要同时在 macOS 和 Windows WSL2 Ubuntu 中可用。具体安装路径和个人环境变量不提交到仓库。
 
+需要按操作系统从零配置时，先阅读 [环境上手指南](environment-setup-guide.md)；本页保留工具链约束、案例命令和当前验证边界。
+
+新机器可以先预览并执行对应 Bootstrap 脚本：Windows 使用 `scripts/bootstrap-windows.ps1`，WSL2 Ubuntu 使用 `scripts/bootstrap-wsl-ubuntu.sh`，macOS 使用 `scripts/bootstrap-macos.sh`。脚本默认只预览，确认后加 `-Install` 或 `--install`；Tomcat 只有显式指定 include 选项才安装。
+
 ## Java
 
 - 默认 JDK：17。
