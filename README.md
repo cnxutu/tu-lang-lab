@@ -21,11 +21,15 @@ Spring、Spring AI、LangChain、FastAPI、Vue、React 等框架学习不放入�
 - [`python/`](python/README.md)：学习 Python 语言、标准库与运行时行为。
 - [`rust/`](rust/README.md)：学习 Rust 的所有权、类型系统与内存模型。
 - [`frontend/`](frontend/README.md)：学习 JavaScript、TypeScript 与 Web API。
+- [`go/`](go/README.md)：学习 Go 类型、接口、泛型、并发与标准库。
+- [`c/`](c/README.md)：学习 C 类型、指针、内存、标准库与构建机制。
 - [`docs/`](docs/README.md)：维护学习路线、环境约定、语言特性地图和学习资源导航。
 
 Java 首轮地图包含 50 个相互独立的 Maven Demo，其中新增的 JDK8 基础入门层覆盖面向对象、集合、泛型、异常、文件 IO、HTTP 网络和线程同步。建议从 [Java 跨代故事线](docs/java-cross-generation-story.md) 和 [版本演进与推荐顺序](docs/java-version-evolution-guide.md) 开始，再按 [Java 特性地图](docs/java-feature-map.md) 进入具体案例；学习地址、GitHub/博客推荐和星级理由见 [Java 学习资源](docs/java-learning-resources.md)，业务问题导航见 [Java 业务场景地图](docs/java-business-scenario-map.md)。
 
 跨语言学习建议阅读 [跨语言学习路线](docs/cross-language-learning-roadmap.md)，再按 [Python 地图](docs/python-feature-map.md)、[Rust 地图](docs/rust-feature-map.md) 和 [Frontend 地图](docs/frontend-feature-map.md) 进入案例；各语言的官方、GitHub 与博客资源及星级理由集中在 [语言学习资源](docs/language-learning-resources.md)。
+
+Go 与 C 的推荐顺序见 [Go 与 C 学习路线](docs/go-c-learning-roadmap.md)，能力索引见 [Go 地图](docs/go-feature-map.md) 和 [C 地图](docs/c-feature-map.md)。
 
 具体的前置案例、后续案例、运行命令和完整性检查见 [K5 学习案例目录](docs/learning-case-catalog.md)。
 

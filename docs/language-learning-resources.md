@@ -19,6 +19,12 @@
 | Web API | [web.dev](https://web.dev/) | ★★★★☆ | 性能、Fetch 和平台能力的实践文章 |
 | JVM/Java | [OpenJDK JEP Index](https://openjdk.org/jeps/0) | ★★★★★ | 版本演进和预览能力的事实依据 |
 | JVM/Java | [Baeldung](https://www.baeldung.com/) | ★★★★☆ | Java/JVM 示例丰富，适合作为社区补充而非规范来源 |
+| Go | [Go Tour](https://go.dev/tour/) | ★★★★★ | 官方交互式入口，适合按 Demo 顺序实践 |
+| Go | [Effective Go](https://go.dev/doc/effective_go) | ★★★★★ | 解释 Go 的惯用设计和错误处理风格 |
+| Go | [Go by Example](https://gobyexample.com/) | ★★★★☆ | 小例子覆盖并发、泛型和标准库，适合快速对照 |
+| C | [cppreference C](https://en.cppreference.com/w/c) | ★★★★★ | 标准库和语言规则查阅入口 |
+| C | [SEI CERT C](https://wiki.sei.cmu.edu/confluence/display/c) | ★★★★★ | 指针、字符串和安全边界的实践规则 |
+| C | [Beej's Guide to C](https://beej.us/guide/bgc/) | ★★★★☆ | 适合从基础到指针的连贯阅读 |
 
 ## 推荐使用方法
 

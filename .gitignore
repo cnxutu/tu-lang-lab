@@ -18,6 +18,11 @@ Thumbs.db
 **/node_modules/
 **/dist/
 
+# Go and C local build output
+**/demo
+**/test_runner
+**/*.test
+
 # Local environment values
 .env
 .env.*

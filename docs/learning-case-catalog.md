@@ -55,9 +55,35 @@ Rust 当前统一标记 `toolchain_pending_verification`，因为本机尚未安
 
 Java 的案例数量较多，使用 [Java 版本演进指南](java-version-evolution-guide.md) 选择阶段，再从 [Java 特性地图](java-feature-map.md) 进入具体 Demo；JDK 25 案例仍保持 `pending_jdk25_verification`。
 
+## Go
+
+| 顺序 | 前置 | 当前案例 | 后续 | 验证 |
+| --- | --- | --- | --- | --- |
+| 1 | 无 | [`types-control-demo`](../go/basic/types-control-demo/) | slice/map | `go test ./...` |
+| 2 | types | [`slices-maps-demo`](../go/collection/slices-maps-demo/) | interface/error | `go test ./...` |
+| 3 | slice/map | [`interfaces-errors-demo`](../go/interface/interfaces-errors-demo/) | generics | `go test ./...` |
+| 4 | interface | [`generics-demo`](../go/generic/generics-demo/) | goroutine/channel | `go test ./...` |
+| 5 | generics | [`goroutine-channel-demo`](../go/concurrency/goroutine-channel-demo/) | context/HTTP | `go test ./...` + `go test -race ./...` |
+| 6 | concurrency | [`context-http-demo`](../go/stdlib/context-http-demo/) | 服务端取消/超时专题 | `go test ./...` |
+
+Go 当前统一标记 `toolchain_pending_verification`，因为本机未安装 Go；安装后按表逐项验证。
+
+## C
+
+| 顺序 | 前置 | 当前案例 | 后续 | 验证 |
+| --- | --- | --- | --- | --- |
+| 1 | 无 | [`types-control-demo`](../c/basic/types-control-demo/) | pointer/memory | `make test` |
+| 2 | types | [`pointer-memory-demo`](../c/memory/pointer-memory-demo/) | struct/functions | `make test` |
+| 3 | pointer | [`struct-functions-demo`](../c/struct/struct-functions-demo/) | arrays/strings | `make test` |
+| 4 | struct | [`arrays-strings-demo`](../c/string/arrays-strings-demo/) | file I/O | `make test` |
+| 5 | strings | [`file-io-demo`](../c/stdlib/file-io-demo/) | preprocessor/build | `make test` |
+| 6 | file I/O | [`preprocessor-demo`](../c/build/preprocessor-demo/) | CMake/平台构建专题 | `make test` |
+
+C 当前统一标记 `toolchain_pending_verification`，因为本机未发现 GCC/Clang；安装后按表逐项验证。
+
 ## 完整性检查清单
 
-- 每个案例有独立工程文件：`pom.xml`、`pyproject.toml`、`Cargo.toml` 或 `package.json`。
+- 每个案例有独立工程文件：`pom.xml`、`pyproject.toml`、`Cargo.toml`、`package.json`、`go.mod` 或 `Makefile`。
 - 每个案例有源代码、测试入口和独立 README。
 - README 固定包含 Feature、Background、Problem、Example、Usage Scenario、Limitations、Version & Status、Learning Resources、Code Walkthrough、Business Mapping、Verification、Run。
 - 进入下一个案例前，先能解释当前案例的收益和限制，而不是只记住 API 名称。

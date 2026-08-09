@@ -18,6 +18,9 @@
 | [language-learning-resources.md](language-learning-resources.md) | 汇总官方、GitHub、国内外社区资源并给出星级理由 | 选择外部学习资料时 |
 | [language-version-evolution-guide.md](language-version-evolution-guide.md) | 梳理 Python、JavaScript、TypeScript 与 Rust 的版本演进背景 | 需要理解“为什么先学这个 Demo”时 |
 | [learning-case-catalog.md](learning-case-catalog.md) | 给出每个案例的前置、后续、验证命令和完整性检查清单 | 按顺序学习或检查案例是否缺项时 |
+| [go-feature-map.md](go-feature-map.md) | Go 类型、接口、泛型、并发与标准库案例索引 | 学习 Go 语言能力时 |
+| [c-feature-map.md](c-feature-map.md) | C 指针、内存、结构体、标准库与构建案例索引 | 学习 C 底层能力时 |
+| [go-c-learning-roadmap.md](go-c-learning-roadmap.md) | 解释 C 与 Go 的递进关系和对照学习方法 | 同时学习 C 与 Go 时 |
 
 ## 文档维护规则
 

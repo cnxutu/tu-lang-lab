@@ -12,6 +12,9 @@
 | Web 平台现代 API | Fetch、AbortController、标准化事件循环 | `fetch-abort-demo`、`event-loop-demo` | 请求取消、超时和 UI 调度成为平台能力 |
 | TypeScript 2.x–5.x | 泛型、联合收窄、Utility Types、严格模式 | `type-system-generics-demo`、`utility-type-demo` | 在不改变 JS 运行时的前提下提前发现契约错误 |
 | Rust 2018/2021 editions | 模块路径、迭代器与 async 生态逐步稳定 | `hello-types-demo`、`async-syntax-demo` | 现代工程默认更清晰，异步运行时保持生态可选择 |
+| C11 | `_Generic`、匿名结构能力和更明确的标准库边界 | `types-control-demo`、`pointer-memory-demo` | 作为可移植 C 学习基线，连接底层内存与系统接口 |
+| Go 1.18+ | 泛型进入稳定能力，接口和 goroutine 模型保持核心地位 | `generics-demo`、`goroutine-channel-demo` | 在简洁语法上提升类型复用和并发工程能力 |
+| Go 1.7+ 标准库 | `context` 成为取消、截止时间和请求链路的通用约定 | `context-http-demo` | 让服务端和客户端能停止无效工作 |
 
 ## 建议阅读动作
 

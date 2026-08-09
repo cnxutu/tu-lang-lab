@@ -38,4 +38,10 @@
 - 按 [Frontend 学习地图](frontend-feature-map.md) 完成 JavaScript 模块、闭包、Promise，再学习 Web API 事件循环和 Fetch 取消，最后进入 TypeScript 泛型与 Utility Types。
 - Node 22 案例已通过内置测试，TypeScript 案例已通过 `tsc --noEmit`。
 
+## Phase 6：C 与 Go 对照学习
+
+- 按 [C 地图](c-feature-map.md) 学习类型、指针、结构体、字符串、文件 I/O 和预处理器。
+- 再按 [Go 地图](go-feature-map.md) 学习 slice/map、interface/error、泛型、goroutine/channel 和 context/HTTP。
+- 使用 [Go 与 C 学习路线](go-c-learning-roadmap.md) 对照内存管理、并发和构建阶段；当前两套工具链均待安装后验证。
+
 框架生态不属于本路线，应在独立的 `framework-lab` 中维护。

@@ -34,3 +34,15 @@ mvn -version
 - 使用 Node.js LTS 与 pnpm。
 - 浏览器案例可用 Vite 提供本地开发服务器；Vite 只承担运行与构建，不作为学习主题。
 - 不在本仓库引入 Vue、React 等框架。
+
+## Go
+
+- 推荐使用 Go 官方安装包或版本管理工具，案例为独立 Go module。
+- 每个案例执行 `go test ./...`；并发案例额外执行 `go test -race ./...`。
+- 当前主机未发现 `go` 命令，案例统一标记 `toolchain_pending_verification`。
+
+## C
+
+- 推荐使用 GCC 或 Clang，案例为独立 Make 工程，默认 C11。
+- 每个案例执行 `make test`，再执行 `make` 和 `./demo`。
+- 当前主机未发现 `gcc`/`clang`，案例统一标记 `toolchain_pending_verification`。
