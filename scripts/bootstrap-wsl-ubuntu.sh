@@ -17,7 +17,7 @@ if ((install == 0)); then
   cat <<'PREVIEW'
 Preview only. Re-run with --install to execute:
   sudo apt-get update
-  sudo apt-get install git curl unzip zip build-essential clang gdb lldb make pkg-config
+  sudo apt-get install git curl unzip zip build-essential clang gdb lldb make pkg-config shellcheck
   configure the Eclipse Adoptium apt repository and install Temurin JDK 8/17/21/25
   install Python3, Go, Rustup, Node.js LTS through nvm, and pnpm through Corepack
   optionally download Apache Tomcat with --include-tomcat
@@ -26,7 +26,7 @@ PREVIEW
 fi
 
 sudo apt-get update
-sudo apt-get install -y git curl wget unzip zip build-essential clang gdb lldb make pkg-config \
+sudo apt-get install -y git curl wget unzip zip build-essential clang gdb lldb make pkg-config shellcheck \
   python3 python3-venv python3-pip golang-go apt-transport-https gnupg
 
 # Adoptium packages keep JDK patch versions behind apt while exposing the K5 majors.

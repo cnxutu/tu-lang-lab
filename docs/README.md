@@ -26,6 +26,8 @@
 | [go-feature-map.md](go-feature-map.md) | Go 类型、接口、泛型、并发与标准库案例索引 | 学习 Go 语言能力时 |
 | [c-feature-map.md](c-feature-map.md) | C 指针、内存、结构体、标准库与构建案例索引 | 学习 C 底层能力时 |
 | [go-c-learning-roadmap.md](go-c-learning-roadmap.md) | 解释 C 与 Go 的递进关系和对照学习方法 | 同时学习 C 与 Go 时 |
+| [shell-feature-map.md](shell-feature-map.md) | Bash 语法、管道、健壮性、进程与信号案例索引 | 学习 WSL 自动化和 Shell 语言能力时 |
+| [shell-learning-resources.md](shell-learning-resources.md) | 汇总 Bash、POSIX、awk、ShellCheck 与工程规范资源 | 选择 Shell 外部学习资料时 |
 
 ## 文档维护规则
 

@@ -53,6 +53,17 @@ Rust 当前统一标记 `toolchain_pending_verification`，因为本机尚未安
 
 ## Java 主线
 
+## Shell / Bash
+
+| 顺序 | 前置 | 当前案例 | 后续 | 验证 |
+| --- | --- | --- | --- | --- |
+| 1 | 无 | [`basics-and-control-demo`](../shell/bash/basics-and-control-demo/) | 管道与文本 | `bash test.sh` |
+| 2 | 变量与控制流 | [`pipeline-and-text-demo`](../shell/bash/pipeline-and-text-demo/) | 健壮脚本 | `bash test.sh` |
+| 3 | 管道与文本 | [`safe-script-demo`](../shell/bash/safe-script-demo/) | 后台任务与信号 | `bash test.sh` |
+| 4 | 健壮脚本 | [`process-and-signal-demo`](../shell/bash/process-and-signal-demo/) | POSIX sh/CI | `bash test.sh` |
+
+Shell 案例默认在 WSL2 Ubuntu 中运行；当前只覆盖 Bash 稳定能力，POSIX 兼容和 Bats 测试作为后续主题。
+
 Java 的案例数量较多，使用 [Java 版本演进指南](java-version-evolution-guide.md) 选择阶段，再从 [Java 特性地图](java-feature-map.md) 进入具体 Demo；JDK 25 案例仍保持 `pending_jdk25_verification`。
 
 ## Go

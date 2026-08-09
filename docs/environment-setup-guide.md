@@ -91,7 +91,7 @@ wsl --list --verbose
 
 ```bash
 sudo apt update
-sudo apt install -y git curl unzip zip build-essential clang gdb lldb make pkg-config
+sudo apt install -y git curl unzip zip build-essential clang gdb lldb make pkg-config shellcheck
 ```
 
 ### 4.3 Java 多版本
@@ -128,7 +128,18 @@ corepack enable pnpm
 pnpm --version
 ```
 
-### 4.5 在 WSL 中打开 K5
+### 4.5 Shell/Bash
+
+WSL2 Ubuntu 已默认提供 Bash；K5 Shell 案例使用 Bash 5.x，并建议安装 ShellCheck：
+
+```bash
+bash --version
+shellcheck --version
+cd /mnt/d/workspace/github/tu-lang-lab/shell/bash/basics-and-control-demo
+bash test.sh
+```
+
+### 4.6 在 WSL 中打开 K5
 
 ```bash
 cd /mnt/d/workspace/github/tu-lang-lab
@@ -236,7 +247,7 @@ make test
 | WSL 构建很慢 | 把仓库放到 `~/workspace`，不要在 `/mnt/d` 高频生成构建文件 |
 | `pnpm` 找不到 | 确认 Node LTS、`corepack enable pnpm` 和新终端 PATH |
 | Rust 编译器缺少 | `source "$HOME/.cargo/env"`，再 `rustup default stable` |
-| C 找不到 `make` | WSL 安装 `build-essential`；Windows 安装 MSYS2 UCRT64 工具链 |
+| C 找不到 `make` | 在 WSL 安装 `build-essential`、Clang 和 Make |
 | 调试时没有符号 | C 增加 `-g`；Rust 使用 debug profile，不要先 `--release` |
 | Windows/WSL 产物互相污染 | 清理对应环境的构建产物后，在同一环境重新构建 |
 

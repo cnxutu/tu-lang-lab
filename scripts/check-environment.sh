@@ -17,6 +17,7 @@ check() {
 }
 
 printf 'K5 environment check: %s\n' "$(pwd)"
+check Bash bash --version
 check Git git --version
 check Java java -version
 check Maven mvn -version
